@@ -47,108 +47,108 @@ There are two folders in the project -
 1. backend
 2. frontend
 
-###### For setting up backend --------------------------------------------------------------------------------------------------------
+## For setting up backend --------------------------
 
 1. first go to backend directory by running the below command in wsl
 
-#         cd backend
+        `cd backend`
 
 2. make a virtual environment in backend folder
-   
-`virtualenv env`
 
-4. write the below command to activate the virtual environment,
+        `virtualenv env`
 
-#          .\env\Scripts\activate.ps1
+3. write the below command to activate the virtual environment,
+
+          `.\env\Scripts\activate.ps1`
 
 4. install redis
 
-#         curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+         `curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg`
     
-#         echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" |  sudo tee /etc/apt/sources.list.d/redis.list
+         `echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" |  sudo tee /etc/apt/sources.list.d/redis.list`
 
-#         sudo apt-get update
+         `sudo apt-get update`
 
-#         sudo apt-get install redis
+         `sudo apt-get install redis`
 
 5. install MailHog 
  
-#         sudo apt-get update
+        `sudo apt-get update`
 
-#         sudo apt-get upgrade
+        `sudo apt-get upgrade`
 
-#         sudo apt-get -y install golang-go
+         `sudo apt-get -y install golang-go`
 
-#         sudo apt get install git
+         `sudo apt get install git`
 
-#         go install github.com/mailhog/MailHog@latest
+        ` go install github.com/mailhog/MailHog@latest`
 
 6. install weasyprint
 
-#         sudo apt-get install python3-dev python3-pip python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
+        ` sudo apt-get install python3-dev python3-pip python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info`
 
-#         pip install weasyprint
+        `pip install weasyprint`
 
 
 7. install the requirement.txt file in the env
 
-#         pip install -r requirement.txt
+         `pip install -r requirement.txt`
 
 8. run redis server (in backend directory)
     
     run below commands in another terminal one by one
 
-#         sudo service redis-server start
+        `sudo service redis-server start`
 
-#         redis-cli
+        `redis-cli`
 
 9. run celery (in backend directory)
 
     run below commands in another terminal
 
-#         celery -A api.celery_app worker -l info
+         `celery -A api.celery_app worker -l info`
        
 10. run celery-beat (in backend directory)
 
-#         celery -A api.celery_app beat --max-interval 1 -l info   
+         `celery -A api.celery_app beat --max-interval 1 -l info`   
 
 11. run MailHog
     
     run below commands in another terminal one by one (Note: Don't open the terminal in IDE, open a seperate WSL terminal from the device)
 
-#         cd go
+         `cd go`
 
-#         cd bin
+         `cd bin`
 
-#         ./MailHog
+        `./MailHog`
 
 12. At last run below command (in backend directory)
 
-#          python3 api.py
+         `python3 api.py`
 
 
-# --------------------------------Note: Run all the above commands in WSL----------------------------
+###### -------------  Note: Run all the above commands in WSL  ----------
 
 
 
-###### For setting up frontend -------------------------------------------------------------------------------------------------------
+## For setting up frontend 
 
 1. first go to frontend directory by running the below command in powershell
 
-#         cd frontend
+         `cd frontend`
 
 2. node_modules folder are not there in the frontend folder so run the below command to make the it
 
-#         npm install
+        `npm install`
 
    (Note: Above command only work if Vue 3 cli setup is done)
 
 3. run the vue app
 
-#         npm run serve
+        `npm run serve`
 
 
-# Using the App
+## Application is using
 
 **SERVERS**
 

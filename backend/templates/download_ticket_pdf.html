@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Movie Booking Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fcf4f4;
+        }
+
+        header {
+            background: linear-gradient(to right, #ffc107, #fafafa);
+            color:#FFF;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background: linear-gradient(to left, #ffc107, #ffffff);
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 0px;
+            color: #333333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color:  #333333;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 12px;
+            color:  #333333;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFF;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .header-content {
+            display: flex;
+            margin-left: 5%;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .company-logo {
+            width: 45px;
+            margin-right: 10px;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content a {
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        li{
+            font-size: 10px;
+            color:  #333333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h2 style="margin: 0;">FilmsTicketForYou</h2>
+        </div>
+    </header>
+    <br>
+    <div class="content">
+        <h2 style="text-align: center;color:  #333333;">Movie Booking Ticket</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{data[0]["User"]}} </td>
+            </tr>
+            <tr>
+                <th>Movie</th>
+                <td>{{data[0]["ShowName"]}} </td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td>{{data[0]["ShowLanguage"]}} </td>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <td>{{data[0]["ShowTime"]}} </td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{data[1]["VenueName"]}}, {{data[1]["VenuePlace"]}}, {{data[1]["CityName"]}} </td>
+            </tr>
+            <tr>
+                <th>Seat/Seats No.</th>
+                <td>{{data[2]["tickets"]}}</td>
+            </tr>
+            <tr>
+                <th>Total Price</th>
+                <td>₹ {{data[2]["tickets"] | length * data[0]["ShowPrice"]}}</td>
+            </tr>
+            <!-- Add more rows for additional tickets or details -->
+        </table>
+        <h5 style="text-align: center; color:  #333333;">Thank you for choosing FilmsTicketForYou. Enjoy your movie!</h5>
+        <h5 style="color: red;">Terms and Conditions:</h5>
+            <li>Bookings are subject to availability and show timings. All bookings are non-refundable and non-transferable.</li>
+            <li>Certain movies may have age restrictions.</li>
+            <li>Seat selection is subject to availability.</li>
+            <li>We accept various secure payment methods.</li>
+            <li>Once booked, you will receive a confirmation email.</li>
+            <li>Tickets are valid for the specified date and showtime.</li>
+            <li>Late entry may be restricted after the movie starts.</li>
+            <li>Your personal information is handled as per our Privacy Policy.</li>
+            <li>Identification may be required for ticket collection or entry.</li>
+            <li>Outside food, weapons, and banned items are not allowed.</li>
+            <li>Movie ratings are displayed for guidance.</li>
+            <li>For support, contact [Customer Support Email or Phone].</li>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h6><b>Website:</b><a style="color: #1920d5;" href="locathost:8080" target="_blank">www.filmsticketforyou.com</a></h6>
+        </div>
+    </footer>
+</body>
+</html>

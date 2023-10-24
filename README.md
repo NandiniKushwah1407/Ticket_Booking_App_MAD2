@@ -1,12 +1,10 @@
-# Ticket_Booking_App_MAD2
-
 # Ticket Booking App : MAD2 Project (Term 2,2023)
 
 Name: Nandini Kushwah
 Roll no.: 22f1001148
 This is my submission for the final project for the course Modern Application Development II
 
-# Technonlogy used for the Application
+## Technonlogy used for the Application
  - VueJs single page application build on vue-cli
  - Bootstrap for Styling
  - Flask Apis are used for backend
@@ -16,7 +14,7 @@ This is my submission for the final project for the course Modern Application De
  - Redis for Caching
  - MailHog for sending mails
 
- # Features of the Application
+ ## Features of the Application
 
  - Seperate User and Admin Login
 
@@ -38,7 +36,7 @@ This is my submission for the final project for the course Modern Application De
  - User can register/SignUp
 
 
-# Software specifications for the web app 
+## Software specifications for the web app 
 
 To run these files we need a IDE(or text editor), python3, WSL or Linux system and a GUI for SQLite3 to see the changes in Database.
 

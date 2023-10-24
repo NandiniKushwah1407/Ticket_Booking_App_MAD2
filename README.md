@@ -54,10 +54,10 @@ There are two folders in the project -
 #         cd backend
 
 2. make a virtual environment in backend folder
+   
+`virtualenv env`
 
-#         virtualenv env
-
-3. write the below command to activate the virtual environment,
+4. write the below command to activate the virtual environment,
 
 #          .\env\Scripts\activate.ps1
 
